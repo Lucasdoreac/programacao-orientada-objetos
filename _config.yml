@@ -1,0 +1,9 @@
+theme: jekyll-theme-cayman
+title: Programação Orientada a Objetos
+description: Aprenda conceitos fundamentais, princípios e implementações práticas de POO
+baseurl: "/programacao-orientada-objetos"
+url: "https://lucasdoreac.github.io"
+lang: pt-BR
+author:
+  name: POO Academy
+  email: contato@example.com
