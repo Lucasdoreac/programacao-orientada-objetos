@@ -13,11 +13,11 @@
     <div class="container">
       <h1><i class="fas fa-cubes"></i> Programação Orientada a Objetos</h1>
       <nav>
-        <a href="#conceitos"><i class="fas fa-book"></i> Conceitos</a>
-        <a href="#pilares"><i class="fas fa-columns"></i> Pilares</a>
-        <a href="#exemplos"><i class="fas fa-code"></i> Exemplos</a>
-        <a href="#quiz"><i class="fas fa-question-circle"></i> Quiz</a>
-        <a href="#recursos"><i class="fas fa-link"></i> Recursos</a>
+        <a href="conceitos.html"><i class="fas fa-book"></i> Conceitos</a>
+        <a href="pilares.html"><i class="fas fa-columns"></i> Pilares</a>
+        <a href="exemplos.html"><i class="fas fa-code"></i> Exemplos</a>
+        <a href="quiz.html"><i class="fas fa-question-circle"></i> Quiz</a>
+        <a href="recursos.html"><i class="fas fa-link"></i> Recursos</a>
       </nav>
     </div>
   </header>
@@ -30,8 +30,8 @@
           <h2>Aprenda os conceitos fundamentais de POO</h2>
           <p>Guia completo para compreender a Programação Orientada a Objetos e sua aplicação no desenvolvimento de software moderno.</p>
           <div class="hero-buttons">
-            <a href="#pilares" class="btn primary-btn"><i class="fas fa-columns"></i> Explorar os 4 Pilares</a>
-            <a href="#exemplos" class="btn secondary-btn"><i class="fas fa-code"></i> Ver Exemplos Práticos</a>
+            <a href="pilares.html" class="btn primary-btn"><i class="fas fa-columns"></i> Explorar os 4 Pilares</a>
+            <a href="exemplos.html" class="btn secondary-btn"><i class="fas fa-code"></i> Ver Exemplos Práticos</a>
           </div>
         </div>
       </section>
@@ -62,105 +62,35 @@
         </div>
       </section>
       
-      <section id="conceitos">
-        <h2><i class="fas fa-book"></i> Conceitos Fundamentais</h2>
-        <p class="section-intro">A Programação Orientada a Objetos é um paradigma baseado no conceito de "objetos", que podem conter dados e código: dados na forma de campos (atributos) e código na forma de procedimentos (métodos).</p>
-        
-        <div class="card-container">
-          <div class="content-card">
-            <h3>O que é POO?</h3>
-            <p><strong>Programação Orientada a Objetos (POO)</strong> é um paradigma de programação baseado no conceito de "objetos", que podem conter dados na forma de campos (atributos) e código na forma de procedimentos (métodos).</p>
-            <p>A POO foi desenvolvida para facilitar o desenvolvimento e manutenção de programas de software, oferecendo benefícios como:</p>
-            <ul>
-              <li>Modularidade: o código fonte de um objeto pode ser escrito e mantido independentemente</li>
-              <li>Reusabilidade: objetos podem ser reutilizados em diferentes programas</li>
-              <li>Escalabilidade: princípios de POO facilitam gerenciar programas maiores</li>
-              <li>Manutenibilidade: isolamento de partes do código facilita fazer mudanças</li>
-            </ul>
-          </div>
+      <section id="visao-geral">
+        <h2><i class="fas fa-info-circle"></i> O que é este site?</h2>
+        <div class="content-card">
+          <p>Este site educativo oferece um guia completo sobre a Programação Orientada a Objetos (POO), um dos paradigmas de programação mais importantes e amplamente utilizados no desenvolvimento de software.</p>
           
-          <div class="content-card">
-            <h3>Classes e Objetos</h3>
-            <p>Uma <strong>classe</strong> é um modelo ou blueprint a partir do qual objetos são criados. Classes definem as características (atributos) e comportamentos (métodos) que seus objetos terão.</p>
-            <p>Um <strong>objeto</strong> é uma instância de uma classe. Quando uma classe é definida, nenhum recurso é alocado, mas quando instanciamos um objeto, a memória é alocada para armazenar os valores das variáveis.</p>
-            <div class="code-example">
-              <pre><code>// Definição de uma classe em Java
-public class Carro {
-    // Atributos
-    private String marca;
-    private String modelo;
-    private int ano;
-    
-    // Construtor
-    public Carro(String marca, String modelo, int ano) {
-        this.marca = marca;
-        this.modelo = modelo;
-        this.ano = ano;
-    }
-    
-    // Método
-    public void acelerar() {
-        System.out.println("O carro está acelerando!");
-    }
-}
-
-// Criando objetos (instâncias)
-Carro meuCarro = new Carro("Toyota", "Corolla", 2023);
-meuCarro.acelerar(); // Chamando um método do objeto</code></pre>
-            </div>
-          </div>
-        </div>
-        
-        <div class="content-card">
-          <h3>Atributos e Métodos</h3>
-          <p><strong>Atributos</strong> (ou propriedades, campos, variáveis de instância) são as características que definem um objeto. Eles representam o estado do objeto e geralmente são declarados como variáveis dentro da classe.</p>
-          <p><strong>Métodos</strong> são as ações ou comportamentos que os objetos podem realizar. Eles representam o que o objeto pode fazer ou como pode interagir com outros objetos.</p>
-          <div class="comparison-table">
-            <table>
-              <thead>
-                <tr>
-                  <th>Atributos</th>
-                  <th>Métodos</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Representam o estado</td>
-                  <td>Representam o comportamento</td>
-                </tr>
-                <tr>
-                  <td>Declarados como variáveis</td>
-                  <td>Declarados como funções</td>
-                </tr>
-                <tr>
-                  <td>Ex: nome, idade, altura</td>
-                  <td>Ex: andar(), falar(), calcular()</td>
-                </tr>
-                <tr>
-                  <td>Armazenam informações</td>
-                  <td>Realizam operações</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-        
-        <div class="content-card">
-          <h3>Mensagem e Comunicação</h3>
-          <p>Em POO, objetos comunicam-se entre si através de <strong>mensagens</strong>. Uma mensagem é uma solicitação para que um objeto execute um de seus métodos.</p>
-          <p>Uma mensagem geralmente contém:</p>
+          <p>Aqui você encontrará:</p>
           <ul>
-            <li>O <strong>receptor</strong> (objeto que receberá a mensagem)</li>
-            <li>O <strong>nome do método</strong> a ser executado</li>
-            <li>Os <strong>parâmetros</strong> necessários (se houver)</li>
+            <li><strong><a href="conceitos.html">Conceitos Fundamentais</a></strong> - Aprenda o que são classes, objetos, atributos, métodos e como eles se relacionam.</li>
+            <li><strong><a href="pilares.html">Os Quatro Pilares</a></strong> - Compreenda encapsulamento, herança, polimorfismo e abstração com exemplos claros.</li>
+            <li><strong><a href="exemplos.html">Exemplos Práticos</a></strong> - Veja implementações em diferentes linguagens (Java, Python, C#).</li>
+            <li><strong><a href="quiz.html">Quiz Interativo</a></strong> - Teste seus conhecimentos com perguntas sobre POO.</li>
+            <li><strong><a href="recursos.html">Recursos Adicionais</a></strong> - Encontre links, tutoriais e documentação para aprofundar seus estudos.</li>
           </ul>
+          
           <div class="info-box">
-            <h4><i class="fas fa-lightbulb"></i> Exemplo de comunicação entre objetos</h4>
-            <p>Considere um sistema de e-commerce onde um objeto <code>Cliente</code> pode adicionar um objeto <code>Produto</code> a um objeto <code>CarrinhoDeCompras</code>. O cliente envia uma mensagem ao carrinho (chamando seu método <code>adicionarItem</code>) passando o produto como parâmetro. Esta troca de mensagens permite que os objetos trabalhem juntos mantendo seu encapsulamento.</p>
+            <h4><i class="fas fa-lightbulb"></i> Por que estudar POO?</h4>
+            <p>A Programação Orientada a Objetos é fundamental para o desenvolvimento de software moderno, pois permite criar código mais organizado, reutilizável e fácil de manter. Muitas linguagens populares como Java, C#, Python, JavaScript e C++ suportam POO, e esses conceitos são essenciais para desenvolvedores que desejam construir sistemas robustos e escaláveis.</p>
           </div>
         </div>
       </section>
     </div>
   </main>
+  
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 - Programação Orientada a Objetos - Site Educativo</p>
+    </div>
+  </footer>
+  
+  <script src="js/scripts.js"></script>
 </body>
 </html>
