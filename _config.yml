@@ -1,8 +1,10 @@
-theme: jekyll-theme-cayman
+remote_theme: pages-themes/cayman@v0.2.0
+plugins:
+- jekyll-remote-theme
 title: Programação Orientada a Objetos
 description: Aprenda conceitos fundamentais, princípios e implementações práticas de POO
-baseurl: "/programacao-orientada-objetos"
-url: "https://lucasdoreac.github.io"
+url: https://lucasdoreac.github.io
+baseurl: /programacao-orientada-objetos
 lang: pt-BR
 author:
   name: POO Academy
