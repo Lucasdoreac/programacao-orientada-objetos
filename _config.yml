@@ -1,2 +1,11 @@
 title: Programação Orientada a Objetos
 description: Aprenda conceitos fundamentais, princípios e implementações práticas de POO
+url: https://lucasdoreac.github.io
+baseurl: /programacao-orientada-objetos
+markdown: kramdown
+theme: jekyll-theme-cayman
+exclude: 
+  - .github/
+  - README.md
+plugins:
+  - jekyll-seo-tag
