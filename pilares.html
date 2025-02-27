@@ -4,10 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Os 4 Pilares da POO - Programação Orientada a Objetos</title>
-  <link rel="stylesheet" href="{{ site.baseurl }}/css/styles.css">
+  <link rel="stylesheet" href="css/styles.css">
   <meta name="description" content="Conheça os 4 pilares fundamentais da Programação Orientada a Objetos: Encapsulamento, Herança, Polimorfismo e Abstração.">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <link rel="manifest" href="{{ site.baseurl }}/site.webmanifest">
+  <link rel="manifest" href="site.webmanifest">
   <meta name="theme-color" content="#2c3e50">
 </head>
 <body>
@@ -15,12 +15,12 @@
     <div class="container">
       <h1><i class="fas fa-cubes"></i> Programação Orientada a Objetos</h1>
       <nav>
-        <a href="{{ site.baseurl }}/"><i class="fas fa-home"></i> Início</a>
-        <a href="{{ site.baseurl }}/conceitos.html"><i class="fas fa-book"></i> Conceitos</a>
-        <a href="{{ site.baseurl }}/pilares.html" class="active"><i class="fas fa-columns"></i> Pilares</a>
-        <a href="{{ site.baseurl }}/exemplos.html"><i class="fas fa-code"></i> Exemplos</a>
-        <a href="{{ site.baseurl }}/quiz.html"><i class="fas fa-question-circle"></i> Quiz</a>
-        <a href="{{ site.baseurl }}/recursos.html"><i class="fas fa-link"></i> Recursos</a>
+        <a href="index.html"><i class="fas fa-home"></i> Início</a>
+        <a href="conceitos.html"><i class="fas fa-book"></i> Conceitos</a>
+        <a href="pilares.html" class="active"><i class="fas fa-columns"></i> Pilares</a>
+        <a href="exemplos.html"><i class="fas fa-code"></i> Exemplos</a>
+        <a href="quiz.html"><i class="fas fa-question-circle"></i> Quiz</a>
+        <a href="recursos.html"><i class="fas fa-link"></i> Recursos</a>
       </nav>
     </div>
   </header>
@@ -42,34 +42,6 @@
             <li>Flexibilidade para alterar a implementação interna</li>
             <li>Redução de dependências entre componentes</li>
           </ul>
-          
-          <div class="code-example" id="exemplo-encapsulamento">
-            <pre><code>
-// Exemplo de encapsulamento em Java
-public class ContaBancaria {
-    private double saldo; // Atributo privado
-    
-    // Métodos públicos para acessar e modificar o saldo
-    public double getSaldo() {
-        return saldo;
-    }
-    
-    public void depositar(double valor) {
-        if (valor > 0) {
-            saldo += valor;
-        }
-    }
-    
-    public boolean sacar(double valor) {
-        if (valor > 0 && saldo >= valor) {
-            saldo -= valor;
-            return true;
-        }
-        return false;
-    }
-}
-            </code></pre>
-          </div>
         </div>
         
         <div class="content-card">
@@ -82,39 +54,6 @@ public class ContaBancaria {
             <li>Herança multinível (classe C herda de B que herda de A)</li>
             <li>Herança múltipla (uma classe herda de várias superclasses - não suportada em todas as linguagens)</li>
           </ul>
-          
-          <div class="code-example" id="exemplo-heranca">
-            <pre><code>
-// Exemplo de herança em Java
-
-// Superclasse
-public class Animal {
-    protected String nome;
-    
-    public Animal(String nome) {
-        this.nome = nome;
-    }
-    
-    public void comer() {
-        System.out.println(nome + " está comendo.");
-    }
-}
-
-// Subclasse
-public class Cachorro extends Animal {
-    private String raca;
-    
-    public Cachorro(String nome, String raca) {
-        super(nome); // Chama o construtor da superclasse
-        this.raca = raca;
-    }
-    
-    public void latir() {
-        System.out.println(nome + " está latindo!");
-    }
-}
-            </code></pre>
-          </div>
         </div>
         
         <div class="content-card">
@@ -127,33 +66,6 @@ public class Cachorro extends Animal {
             <li>Sobrescrita (overriding): redefine um método herdado da superclasse</li>
             <li>Polimorfismo de subtipo: um objeto de uma subclasse pode ser tratado como objeto da superclasse</li>
           </ul>
-          
-          <div class="code-example" id="exemplo-polimorfismo">
-            <pre><code>
-// Exemplo de polimorfismo em Java
-
-// Sobrescrita (override)
-public class Gato extends Animal {
-    public Gato(String nome) {
-        super(nome);
-    }
-    
-    @Override
-    public void comer() {
-        System.out.println(nome + " está comendo peixe.");
-    }
-}
-
-// Uso de polimorfismo
-Animal animal1 = new Animal("Bob");
-Animal animal2 = new Cachorro("Rex", "Labrador");
-Animal animal3 = new Gato("Felix");
-
-animal1.comer(); // "Bob está comendo."
-animal2.comer(); // "Rex está comendo."
-animal3.comer(); // "Felix está comendo peixe."
-            </code></pre>
-          </div>
         </div>
         
         <div class="content-card">
@@ -167,37 +79,6 @@ animal3.comer(); // "Felix está comendo peixe."
             <li>Redução de duplicação de código</li>
             <li>Melhoria da manutenibilidade</li>
           </ul>
-          
-          <div class="code-example" id="exemplo-abstracao">
-            <pre><code>
-// Exemplo de abstração em Java
-
-// Classe abstrata
-public abstract class FormaGeometrica {
-    // Método abstrato - sem implementação
-    public abstract double calcularArea();
-    
-    // Método concreto
-    public void desenhar() {
-        System.out.println("Desenhando a forma...");
-    }
-}
-
-// Implementações concretas
-public class Circulo extends FormaGeometrica {
-    private double raio;
-    
-    public Circulo(double raio) {
-        this.raio = raio;
-    }
-    
-    @Override
-    public double calcularArea() {
-        return Math.PI * raio * raio;
-    }
-}
-            </code></pre>
-          </div>
         </div>
       </section>
     </div>
@@ -209,6 +90,6 @@ public class Circulo extends FormaGeometrica {
     </div>
   </footer>
   
-  <script src="{{ site.baseurl }}/js/scripts.js"></script>
+  <script src="js/scripts.js"></script>
 </body>
 </html>
