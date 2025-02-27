@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Os 4 Pilares da POO - Programação Orientada a Objetos</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <meta name="description" content="Os quatro pilares da Programação Orientada a Objetos: encapsulamento, herança, polimorfismo e abstração explicados com exemplos práticos.">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1><i class="fas fa-cubes"></i> Programação Orientada a Objetos</h1>
+      <nav>
+        <a href="index.html"><i class="fas fa-home"></i> Início</a>
+        <a href="conceitos.html"><i class="fas fa-book"></i> Conceitos</a>
+        <a href="pilares.html" class="active"><i class="fas fa-columns"></i> Pilares</a>
+        <a href="exemplos.html"><i class="fas fa-code"></i> Exemplos</a>
+        <a href="quiz.html"><i class="fas fa-question-circle"></i> Quiz</a>
+        <a href="recursos.html"><i class="fas fa-link"></i> Recursos</a>
+      </nav>
+    </div>
+  </header>
+  
+  <main>
+    <div class="container">
+      <section id="pilares">
+        <h2><i class="fas fa-columns"></i> Os Quatro Pilares da POO</h2>
+        <p class="section-intro">A Programação Orientada a Objetos se baseia em quatro princípios fundamentais que estabelecem as bases para criar software bem estruturado, reutilizável e de fácil manutenção.</p>
+        
+        <div class="pillar-grid">
+          <div class="pillar-item">
+            <h3>1. Encapsulamento</h3>
+            <p>O <strong>encapsulamento</strong> é o princípio de ocultar os detalhes internos de um objeto e expor apenas o necessário. É a prática de manter os atributos privados e fornecer métodos públicos para acessá-los (getters e setters).</p>
+            <p>Benefícios do encapsulamento:</p>
+            <ul class="pillar-features">
+              <li>Proteção de dados sensíveis</li>
+              <li>Controle sobre como os dados são acessados e modificados</li>
+              <li>Flexibilidade para alterar a implementação interna</li>
+              <li>Redução de dependências entre componentes</li>
+            </ul>
+            <div class="code-example">
+              <pre><code>// Exemplo de encapsulamento em Java
+public class ContaBancaria {
+    private double saldo; // Atributo privado
+    
+    // Métodos públicos para acessar e modificar o saldo
+    public double getSaldo() {
+        return saldo;
+    }
+    
+    public void depositar(double valor) {
+        if (valor > 0) {
+            saldo += valor;
+        }
+    }
+    
+    public boolean sacar(double valor) {
+        if (valor > 0 && saldo >= valor) {
+            saldo -= valor;
+            return true;
+        }
+        return false;
+    }
+}</code></pre>
+            </div>
+          </div>
+          
+          <div class="pillar-item">
+            <h3>2. Herança</h3>
+            <p>A <strong>herança</strong> permite que uma classe (subclasse) herde atributos e métodos de outra classe (superclasse). Este mecanismo promove a reutilização de código e estabelece uma relação "é-um" entre classes.</p>
+            <p>Tipos de herança:</p>
+            <ul class="pillar-features">
+              <li>Herança simples (uma classe herda de uma superclasse)</li>
+              <li>Herança multinível (classe C herda de B que herda de A)</li>
+              <li>Herança múltipla (uma classe herda de várias superclasses - não suportada em todas as linguagens)</li>
+            </ul>
+            <div class="code-example">
+              <pre><code>// Exemplo de herança em Java
+// Superclasse
+public class Animal {
+    protected String nome;
+    
+    public Animal(String nome) {
+        this.nome = nome;
+    }
+    
+    public void comer() {
+        System.out.println(nome + " está comendo.");
+    }
+}
+
+// Subclasse
+public class Cachorro extends Animal {
+    private String raca;
+    
+    public Cachorro(String nome, String raca) {
+        super(nome); // Chama o construtor da superclasse
+        this.raca = raca;
+    }
+    
+    public void latir() {
+        System.out.println(nome + " está latindo!");
+    }
+}</code></pre>
+            </div>
+          </div>
+        </div>
+        
+        <div class="pillar-grid">
+          <div class="pillar-item">
+            <h3>3. Polimorfismo</h3>
+            <p>O <strong>polimorfismo</strong> permite que objetos de diferentes classes sejam tratados como objetos de uma classe comum. Literalmente significa "muitas formas" e permite que métodos tenham comportamentos diferentes em classes diferentes.</p>
+            <p>Tipos de polimorfismo:</p>
+            <ul class="pillar-features">
+              <li>Sobrecarga (overloading): múltiplos métodos com o mesmo nome mas parâmetros diferentes</li>
+              <li>Sobrescrita (overriding): redefine um método herdado da superclasse</li>
+              <li>Polimorfismo de subtipo: um objeto de uma subclasse pode ser tratado como objeto da superclasse</li>
+            </ul>
+            <div class="code-example">
+              <pre><code>// Exemplo de polimorfismo em Java
+// Sobrescrita (override)
+public class Gato extends Animal {
+    public Gato(String nome) {
+        super(nome);
+    }
+    
+    @Override
+    public void comer() {
+        System.out.println(nome + " está comendo peixe.");
+    }
+}
+
+// Uso de polimorfismo
+Animal animal1 = new Animal("Bob");
+Animal animal2 = new Cachorro("Rex", "Labrador");
+Animal animal3 = new Gato("Felix");
+
+animal1.comer(); // "Bob está comendo."
+animal2.comer(); // "Rex está comendo."
+animal3.comer(); // "Felix está comendo peixe."</code></pre>
+            </div>
+          </div>
+          
+          <div class="pillar-item">
+            <h3>4. Abstração</h3>
+            <p>A <strong>abstração</strong> é o processo de identificar apenas as características relevantes de um objeto, ignorando os detalhes irrelevantes. Isso permite criar modelos simplificados que capturam a essência das entidades do mundo real.</p>
+            <p>Benefícios da abstração:</p>
+            <ul class="pillar-features">
+              <li>Simplificação da complexidade</li>
+              <li>Foco nas características essenciais</li>
+              <li>Redução de duplicação de código</li>
+              <li>Melhoria da manutenibilidade</li>
+            </ul>
+            <div class="code-example">
+              <pre><code>// Exemplo de abstração em Java
+// Classe abstrata
+public abstract class FormaGeometrica {
+    // Método abstrato - sem implementação
+    public abstract double calcularArea();
+    
+    // Método concreto
+    public void desenhar() {
+        System.out.println("Desenhando a forma...");
+    }
+}
+
+// Implementações concretas
+public class Circulo extends FormaGeometrica {
+    private double raio;
+    
+    public Circulo(double raio) {
+        this.raio = raio;
+    }
+    
+    @Override
+    public double calcularArea() {
+        return Math.PI * raio * raio;
+    }
+}</code></pre>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+  
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 - Programação Orientada a Objetos - Site Educativo</p>
+    </div>
+  </footer>
+  
+  <script src="js/scripts.js"></script>
+</body>
+</html>
