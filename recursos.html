@@ -1,24 +1,26 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Recursos de POO - Programação Orientada a Objetos</title>
-  <link rel="stylesheet" href="css/styles.css">
-  <meta name="description" content="Recursos educativos sobre Programação Orientada a Objetos: livros, tutoriais, documentação e links para comunidades.">
+  <link rel="stylesheet" href="{{ site.baseurl }}/css/styles.css">
+  <meta name="description" content="Recursos e referências para aprender mais sobre Programação Orientada a Objetos (POO): livros, cursos online, documentação e comunidades.">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="manifest" href="{{ site.baseurl }}/site.webmanifest">
+  <meta name="theme-color" content="#2c3e50">
 </head>
 <body>
   <header>
     <div class="container">
       <h1><i class="fas fa-cubes"></i> Programação Orientada a Objetos</h1>
       <nav>
-        <a href="index.html"><i class="fas fa-home"></i> Início</a>
-        <a href="conceitos.html"><i class="fas fa-book"></i> Conceitos</a>
-        <a href="pilares.html"><i class="fas fa-columns"></i> Pilares</a>
-        <a href="exemplos.html"><i class="fas fa-code"></i> Exemplos</a>
-        <a href="quiz.html"><i class="fas fa-question-circle"></i> Quiz</a>
-        <a href="recursos.html" class="active"><i class="fas fa-link"></i> Recursos</a>
+        <a href="{{ site.baseurl }}/"><i class="fas fa-home"></i> Início</a>
+        <a href="{{ site.baseurl }}/conceitos.html"><i class="fas fa-book"></i> Conceitos</a>
+        <a href="{{ site.baseurl }}/pilares.html"><i class="fas fa-columns"></i> Pilares</a>
+        <a href="{{ site.baseurl }}/exemplos.html"><i class="fas fa-code"></i> Exemplos</a>
+        <a href="{{ site.baseurl }}/quiz.html"><i class="fas fa-question-circle"></i> Quiz</a>
+        <a href="{{ site.baseurl }}/recursos.html" class="active"><i class="fas fa-link"></i> Recursos</a>
       </nav>
     </div>
   </header>
@@ -31,7 +33,7 @@
         
         <div class="content-card">
           <h3><i class="fas fa-book"></i> Livros Recomendados</h3>
-          <ul>
+          <ul class="resource-list">
             <li>
               <strong>Clean Code: A Handbook of Agile Software Craftsmanship</strong> - Robert C. Martin
               <p>Um clássico que explora princípios de bom design orientado a objetos e práticas de código limpo.</p>
@@ -56,62 +58,62 @@
         </div>
         
         <div class="content-card">
-          <h3><i class="fas fa-graduation-cap"></i> Cursos Online</h3>
-          <ul>
+          <h3><i class="fas fa-laptop-code"></i> Cursos Online</h3>
+          <ul class="resource-list">
             <li>
-              <a href="https://www.coursera.org/learn/object-oriented-java" target="_blank">Object Oriented Programming in Java</a> (Coursera)
+              <strong>Object Oriented Programming in Java</strong> (Coursera)
               <p>Curso da Universidade da Califórnia, San Diego, que ensina os princípios de POO usando Java.</p>
             </li>
             <li>
-              <a href="https://www.edx.org/learn/object-oriented-programming" target="_blank">Object-Oriented Programming</a> (edX)
+              <strong>Object-Oriented Programming</strong> (edX)
               <p>Cursos de várias universidades ensinando conceitos de POO em diferentes linguagens.</p>
             </li>
             <li>
-              <a href="https://www.udemy.com/course/java-the-complete-object-oriented-programming-course/" target="_blank">Java: The Complete Object-Oriented Programming Course</a> (Udemy)
+              <strong>Java: The Complete Object-Oriented Programming Course</strong> (Udemy)
               <p>Curso completo que aborda todos os conceitos de POO com exemplos práticos em Java.</p>
             </li>
             <li>
-              <a href="https://www.codecademy.com/learn/learn-python-3" target="_blank">Learn Python 3</a> (Codecademy)
+              <strong>Learn Python 3</strong> (Codecademy)
               <p>Inclui módulos dedicados a classes e objetos em Python.</p>
             </li>
           </ul>
         </div>
         
         <div class="content-card">
-          <h3><i class="fas fa-file-code"></i> Documentação Oficial</h3>
-          <ul>
+          <h3><i class="fas fa-file-alt"></i> Documentação Oficial</h3>
+          <ul class="resource-list">
             <li>
-              <a href="https://docs.oracle.com/javase/tutorial/java/concepts/" target="_blank">The Java Tutorials: Object-Oriented Programming Concepts</a>
+              <strong>The Java Tutorials: Object-Oriented Programming Concepts</strong>
               <p>Documentação oficial da Oracle sobre conceitos de POO em Java.</p>
             </li>
             <li>
-              <a href="https://docs.python.org/3/tutorial/classes.html" target="_blank">Python Documentation: Classes</a>
+              <strong>Python Documentation: Classes</strong>
               <p>Explicação oficial sobre como implementar classes e objetos em Python.</p>
             </li>
             <li>
-              <a href="https://docs.microsoft.com/en-us/dotnet/csharp/fundamentals/object-oriented-programming" target="_blank">C# Documentation: Object-Oriented Programming</a>
+              <strong>C# Documentation: Object-Oriented Programming</strong>
               <p>Guia da Microsoft sobre programação orientada a objetos em C#.</p>
             </li>
             <li>
-              <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object-oriented_programming" target="_blank">MDN Web Docs: Object-oriented JavaScript</a>
+              <strong>MDN Web Docs: Object-oriented JavaScript</strong>
               <p>Explicação sobre como JavaScript implementa conceitos orientados a objetos.</p>
             </li>
           </ul>
         </div>
         
         <div class="content-card">
-          <h3><i class="fas fa-video"></i> Tutoriais em Vídeo</h3>
-          <ul>
+          <h3><i class="fab fa-youtube"></i> Tutoriais em Vídeo</h3>
+          <ul class="resource-list">
             <li>
-              <a href="https://www.youtube.com/playlist?list=PLJ9QlqwVrE8RMnSvAZoVYLTNkGHCvKKrs" target="_blank">Object-Oriented Programming in 7 minutes</a> (Mosh Hamedani)
+              <strong>Object-Oriented Programming in 7 minutes</strong> (Mosh Hamedani)
               <p>Explicação rápida e clara dos conceitos fundamentais de POO.</p>
             </li>
             <li>
-              <a href="https://www.youtube.com/playlist?list=PLGLfVvz_LVvS5P7khyR4xDp7T9lCk9PgE" target="_blank">Object Oriented Programming Course</a> (Derek Banas)
+              <strong>Object Oriented Programming Course</strong> (Derek Banas)
               <p>Série de vídeos cobrindo todos os aspectos de POO com exemplos em Java.</p>
             </li>
             <li>
-              <a href="https://www.youtube.com/playlist?list=PLQVvvaa0QuDcuttMGXQ2berlLFBqABgrB" target="_blank">Python OOP Tutorial</a> (sentdex)
+              <strong>Python OOP Tutorial</strong> (sentdex)
               <p>Tutorial de POO em Python, focado em aplicações práticas.</p>
             </li>
           </ul>
@@ -119,17 +121,17 @@
         
         <div class="content-card">
           <h3><i class="fas fa-users"></i> Comunidades e Fóruns</h3>
-          <ul>
+          <ul class="resource-list">
             <li>
-              <a href="https://stackoverflow.com/questions/tagged/oop" target="_blank">Stack Overflow - Tag OOP</a>
+              <strong>Stack Overflow - Tag OOP</strong>
               <p>Perguntas e respostas específicas sobre programação orientada a objetos.</p>
             </li>
             <li>
-              <a href="https://www.reddit.com/r/learnprogramming/" target="_blank">Reddit - r/learnprogramming</a>
+              <strong>Reddit - r/learnprogramming</strong>
               <p>Comunidade para discutir conceitos de programação, incluindo POO.</p>
             </li>
             <li>
-              <a href="https://dev.to/t/oop" target="_blank">DEV Community - OOP</a>
+              <strong>DEV Community - OOP</strong>
               <p>Artigos e discussões sobre programação orientada a objetos.</p>
             </li>
           </ul>
@@ -144,6 +146,6 @@
     </div>
   </footer>
   
-  <script src="js/scripts.js"></script>
+  <script src="{{ site.baseurl }}/js/scripts.js"></script>
 </body>
 </html>
