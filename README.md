@@ -1,55 +1,61 @@
 # Programação Orientada a Objetos - Site Educativo
 
-Este repositório contém um site educativo completo sobre Programação Orientada a Objetos (POO), desenvolvido para GitHub Pages. O site oferece conteúdo abrangente, interativo e visualmente atraente para todos que desejam aprender os princípios e aplicações da POO.
+## Site Estático Completo sobre POO
+
+Este é um site educativo completo sobre Programação Orientada a Objetos (POO), que contém explicações, exemplos de código, quiz interativo e recursos para estudantes e desenvolvedores.
+
+## Acesso ao Site
+
+O site pode ser acessado diretamente via GitHub Pages:
+
+[https://lucasdoreac.github.io/programacao-orientada-objetos/](https://lucasdoreac.github.io/programacao-orientada-objetos/)
+
+**Nota sobre disponibilidade**: Após mudanças no repositório, o site pode levar alguns minutos para ser atualizado no GitHub Pages.
 
 ## Conteúdo do Site
 
-- **Introdução à POO**: Conceitos fundamentais, história e importância
-- **Os Quatro Pilares**: Explicações detalhadas sobre encapsulamento, herança, polimorfismo e abstração
-- **Implementações Práticas**: Exemplos de código em diferentes linguagens
-- **Quiz Interativo**: Teste seus conhecimentos com feedback imediato
-- **Recursos Adicionais**: Biblioteca extensa de links, referências e material complementar
+O site está organizado nas seguintes seções:
 
-## Tecnologias Utilizadas
+- **Página Inicial**: Visão geral e introdução à POO
+- **Conceitos Fundamentais**: Classes, objetos, atributos e métodos
+- **Os Quatro Pilares**: Encapsulamento, herança, polimorfismo e abstração
+- **Exemplos Práticos**: Implementações em Java, Python e C#
+- **Quiz Interativo**: Teste seus conhecimentos
+- **Recursos Adicionais**: Links, livros e referências para aprofundamento
 
-- **HTML5/CSS3**: Estrutura e estilização moderna
-- **JavaScript**: Interatividade e recursos dinâmicos
-- **Font Awesome**: Biblioteca de ícones
-- **GitHub Pages**: Hospedagem e deploy automático
-
-## Como Acessar
-
-O site está disponível em: [https://lucasdoreac.github.io/programacao-orientada-objetos/](https://lucasdoreac.github.io/programacao-orientada-objetos/)
-
-**Nota**: Após alterações no repositório, o GitHub Pages pode levar alguns minutos para atualizar e disponibilizar o site.
-
-## Estrutura do Projeto
+## Estrutura de Arquivos
 
 ```
 programacao-orientada-objetos/
 │
-├── _config.yml         # Configuração do site
-├── .nojekyll           # Arquivo para desabilitar processamento Jekyll
-├── .github/workflows/  # Workflow para deploy automático
 ├── index.html          # Página inicial
-├── conceitos.html      # Página sobre conceitos fundamentais
-├── pilares.html        # Página sobre os quatro pilares
-├── exemplos.html       # Página com exemplos práticos
-├── quiz.html           # Página com quiz interativo
-├── recursos.html       # Página com recursos e referências
-├── css/                # Estilos CSS
+├── conceitos.html      # Conceitos fundamentais
+├── pilares.html        # Os quatro pilares da POO
+├── exemplos.html       # Exemplos de implementação
+├── quiz.html           # Quiz interativo
+├── recursos.html       # Links e recursos adicionais
+├── css/                # Estilos do site
 ├── js/                 # Scripts JavaScript
+├── _config.yml         # Configuração do Jekyll para GitHub Pages
+├── .nojekyll           # Indica que o site não usa processamento Jekyll
 └── README.md           # Este arquivo
 ```
 
-## Contribuições
+## Desenvolvimento e Contribuição
 
-Contribuições são bem-vindas! Sinta-se à vontade para abrir issues ou enviar pull requests com melhorias, correções ou adições de conteúdo.
+Este site foi desenvolvido com tecnologias web padrão:
+
+- HTML5: Estrutura do site
+- CSS3: Estilização
+- JavaScript: Interatividade (quiz, navegação entre abas)
+- GitHub Pages: Hospedagem gratuita
+
+Para contribuir com este projeto:
+
+1. Faça um fork do repositório
+2. Faça suas alterações
+3. Envie um pull request
 
 ## Licença
 
-Este projeto está licenciado sob a [MIT License](LICENSE).
-
----
-
-Desenvolvido com ❤️ para a comunidade de estudantes e desenvolvedores
+Este projeto está disponível sob a licença MIT.
