@@ -1,24 +1,26 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Conceitos de POO - Programação Orientada a Objetos</title>
-  <link rel="stylesheet" href="css/styles.css">
-  <meta name="description" content="Conceitos fundamentais de Programação Orientada a Objetos (POO): classes, objetos, atributos, métodos e comunicação entre objetos.">
+  <link rel="stylesheet" href="{{ site.baseurl }}/css/styles.css">
+  <meta name="description" content="Aprenda os conceitos fundamentais de Programação Orientada a Objetos (POO): classes, objetos, atributos, métodos e mais.">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="manifest" href="{{ site.baseurl }}/site.webmanifest">
+  <meta name="theme-color" content="#2c3e50">
 </head>
 <body>
   <header>
     <div class="container">
       <h1><i class="fas fa-cubes"></i> Programação Orientada a Objetos</h1>
       <nav>
-        <a href="index.html"><i class="fas fa-home"></i> Início</a>
-        <a href="conceitos.html" class="active"><i class="fas fa-book"></i> Conceitos</a>
-        <a href="pilares.html"><i class="fas fa-columns"></i> Pilares</a>
-        <a href="exemplos.html"><i class="fas fa-code"></i> Exemplos</a>
-        <a href="quiz.html"><i class="fas fa-question-circle"></i> Quiz</a>
-        <a href="recursos.html"><i class="fas fa-link"></i> Recursos</a>
+        <a href="{{ site.baseurl }}/"><i class="fas fa-home"></i> Início</a>
+        <a href="{{ site.baseurl }}/conceitos.html" class="active"><i class="fas fa-book"></i> Conceitos</a>
+        <a href="{{ site.baseurl }}/pilares.html"><i class="fas fa-columns"></i> Pilares</a>
+        <a href="{{ site.baseurl }}/exemplos.html"><i class="fas fa-code"></i> Exemplos</a>
+        <a href="{{ site.baseurl }}/quiz.html"><i class="fas fa-question-circle"></i> Quiz</a>
+        <a href="{{ site.baseurl }}/recursos.html"><i class="fas fa-link"></i> Recursos</a>
       </nav>
     </div>
   </header>
@@ -29,25 +31,28 @@
         <h2><i class="fas fa-book"></i> Conceitos Fundamentais</h2>
         <p class="section-intro">A Programação Orientada a Objetos é um paradigma baseado no conceito de "objetos", que podem conter dados e código: dados na forma de campos (atributos) e código na forma de procedimentos (métodos).</p>
         
-        <div class="card-container">
-          <div class="content-card">
-            <h3>O que é POO?</h3>
-            <p><strong>Programação Orientada a Objetos (POO)</strong> é um paradigma de programação baseado no conceito de "objetos", que podem conter dados na forma de campos (atributos) e código na forma de procedimentos (métodos).</p>
-            <p>A POO foi desenvolvida para facilitar o desenvolvimento e manutenção de programas de software, oferecendo benefícios como:</p>
-            <ul>
-              <li>Modularidade: o código fonte de um objeto pode ser escrito e mantido independentemente</li>
-              <li>Reusabilidade: objetos podem ser reutilizados em diferentes programas</li>
-              <li>Escalabilidade: princípios de POO facilitam gerenciar programas maiores</li>
-              <li>Manutenibilidade: isolamento de partes do código facilita fazer mudanças</li>
-            </ul>
-          </div>
+        <div class="content-card">
+          <h3>O que é POO?</h3>
+          <p>Programação Orientada a Objetos (POO) é um paradigma de programação baseado no conceito de "objetos", que podem conter dados na forma de campos (atributos) e código na forma de procedimentos (métodos).</p>
           
-          <div class="content-card">
-            <h3>Classes e Objetos</h3>
-            <p>Uma <strong>classe</strong> é um modelo ou blueprint a partir do qual objetos são criados. Classes definem as características (atributos) e comportamentos (métodos) que seus objetos terão.</p>
-            <p>Um <strong>objeto</strong> é uma instância de uma classe. Quando uma classe é definida, nenhum recurso é alocado, mas quando instanciamos um objeto, a memória é alocada para armazenar os valores das variáveis.</p>
-            <div class="code-example">
-              <pre><code>// Definição de uma classe em Java
+          <p>A POO foi desenvolvida para facilitar o desenvolvimento e manutenção de programas de software, oferecendo benefícios como:</p>
+          <ul>
+            <li>Modularidade: o código fonte de um objeto pode ser escrito e mantido independentemente</li>
+            <li>Reusabilidade: objetos podem ser reutilizados em diferentes programas</li>
+            <li>Escalabilidade: princípios de POO facilitam gerenciar programas maiores</li>
+            <li>Manutenibilidade: isolamento de partes do código facilita fazer mudanças</li>
+          </ul>
+        </div>
+        
+        <div class="content-card">
+          <h3>Classes e Objetos</h3>
+          <p>Uma classe é um modelo ou blueprint a partir do qual objetos são criados. Classes definem as características (atributos) e comportamentos (métodos) que seus objetos terão.</p>
+          
+          <p>Um objeto é uma instância de uma classe. Quando uma classe é definida, nenhum recurso é alocado, mas quando instanciamos um objeto, a memória é alocada para armazenar os valores das variáveis.</p>
+          
+          <div class="code-example" id="exemplo-classe">
+            <pre><code>
+// Definição de uma classe em Java
 public class Carro {
     // Atributos
     private String marca;
@@ -69,92 +74,96 @@ public class Carro {
 
 // Criando objetos (instâncias)
 Carro meuCarro = new Carro("Toyota", "Corolla", 2023);
-meuCarro.acelerar(); // Chamando um método do objeto</code></pre>
-            </div>
+meuCarro.acelerar(); // Chamando um método do objeto
+            </code></pre>
           </div>
         </div>
         
         <div class="content-card">
           <h3>Atributos e Métodos</h3>
-          <p><strong>Atributos</strong> (ou propriedades, campos, variáveis de instância) são as características que definem um objeto. Eles representam o estado do objeto e geralmente são declarados como variáveis dentro da classe.</p>
-          <p><strong>Métodos</strong> são as ações ou comportamentos que os objetos podem realizar. Eles representam o que o objeto pode fazer ou como pode interagir com outros objetos.</p>
-          <div class="comparison-table">
-            <table>
-              <thead>
-                <tr>
-                  <th>Atributos</th>
-                  <th>Métodos</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Representam o estado</td>
-                  <td>Representam o comportamento</td>
-                </tr>
-                <tr>
-                  <td>Declarados como variáveis</td>
-                  <td>Declarados como funções</td>
-                </tr>
-                <tr>
-                  <td>Ex: nome, idade, altura</td>
-                  <td>Ex: andar(), falar(), calcular()</td>
-                </tr>
-                <tr>
-                  <td>Armazenam informações</td>
-                  <td>Realizam operações</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
+          <p>Atributos (ou propriedades, campos, variáveis de instância) são as características que definem um objeto. Eles representam o estado do objeto e geralmente são declarados como variáveis dentro da classe.</p>
+          
+          <p>Métodos são as ações ou comportamentos que os objetos podem realizar. Eles representam o que o objeto pode fazer ou como pode interagir com outros objetos.</p>
+          
+          <table class="comparison-table">
+            <tr>
+              <th>Atributos</th>
+              <th>Métodos</th>
+            </tr>
+            <tr>
+              <td>Representam o estado</td>
+              <td>Representam o comportamento</td>
+            </tr>
+            <tr>
+              <td>Declarados como variáveis</td>
+              <td>Declarados como funções</td>
+            </tr>
+            <tr>
+              <td>Ex: nome, idade, altura</td>
+              <td>Ex: andar(), falar(), calcular()</td>
+            </tr>
+            <tr>
+              <td>Armazenam informações</td>
+              <td>Realizam operações</td>
+            </tr>
+          </table>
         </div>
         
         <div class="content-card">
           <h3>Mensagem e Comunicação</h3>
-          <p>Em POO, objetos comunicam-se entre si através de <strong>mensagens</strong>. Uma mensagem é uma solicitação para que um objeto execute um de seus métodos.</p>
+          <p>Em POO, objetos comunicam-se entre si através de mensagens. Uma mensagem é uma solicitação para que um objeto execute um de seus métodos.</p>
+          
           <p>Uma mensagem geralmente contém:</p>
           <ul>
-            <li>O <strong>receptor</strong> (objeto que receberá a mensagem)</li>
-            <li>O <strong>nome do método</strong> a ser executado</li>
-            <li>Os <strong>parâmetros</strong> necessários (se houver)</li>
+            <li>O receptor (objeto que receberá a mensagem)</li>
+            <li>O nome do método a ser executado</li>
+            <li>Os parâmetros necessários (se houver)</li>
           </ul>
+          
           <div class="info-box">
             <h4><i class="fas fa-lightbulb"></i> Exemplo de comunicação entre objetos</h4>
-            <p>Considere um sistema de e-commerce onde um objeto <code>Cliente</code> pode adicionar um objeto <code>Produto</code> a um objeto <code>CarrinhoDeCompras</code>. O cliente envia uma mensagem ao carrinho (chamando seu método <code>adicionarItem</code>) passando o produto como parâmetro. Esta troca de mensagens permite que os objetos trabalhem juntos mantendo seu encapsulamento.</p>
+            <p>Considere um sistema de e-commerce onde um objeto Cliente pode adicionar um objeto Produto a um objeto CarrinhoDeCompras. O cliente envia uma mensagem ao carrinho (chamando seu método adicionarItem) passando o produto como parâmetro. Esta troca de mensagens permite que os objetos trabalhem juntos mantendo seu encapsulamento.</p>
           </div>
         </div>
       </section>
       
       <section id="conceitos-adicionais">
-        <h2><i class="fas fa-puzzle-piece"></i> Conceitos Adicionais</h2>
+        <h2><i class="fas fa-plus-circle"></i> Conceitos Adicionais</h2>
         
         <div class="content-card">
           <h3>Construtores e Destrutores</h3>
-          <p>Um <strong>construtor</strong> é um método especial que é chamado quando um objeto é instanciado. Sua função é inicializar os atributos do objeto e realizar qualquer configuração necessária.</p>
-          <p>Um <strong>destrutor</strong> (ou finalizador) é um método chamado quando um objeto está prestes a ser destruído. Em linguagens com gerenciamento automático de memória (como Java e C#), os destrutores são menos comuns e geralmente substituídos por outros mecanismos.</p>
-          <div class="code-example">
-            <pre><code>// Exemplo de construtor em Python
+          <p>Um construtor é um método especial que é chamado quando um objeto é instanciado. Sua função é inicializar os atributos do objeto e realizar qualquer configuração necessária.</p>
+          
+          <p>Um destrutor (ou finalizador) é um método chamado quando um objeto está prestes a ser destruído. Em linguagens com gerenciamento automático de memória (como Java e C#), os destrutores são menos comuns e geralmente substituídos por outros mecanismos.</p>
+          
+          <div class="code-example" id="exemplo-construtor">
+            <pre><code>
+// Exemplo de construtor em Python
 class Pessoa:
     def __init__(self, nome, idade):  # Construtor
         self.nome = nome
         self.idade = idade
         print(f"Objeto {nome} criado")
-    
+        
     def __del__(self):  # Destrutor
         print(f"Objeto {self.nome} destruído")
-
+        
 # Criando objeto
 p1 = Pessoa("João", 25)  # Saída: Objeto João criado
 
 # Quando o objeto for removido pelo coletor de lixo
-# Saída: Objeto João destruído</code></pre>
+# Saída: Objeto João destruído
+            </code></pre>
           </div>
         </div>
         
         <div class="content-card">
           <h3>Pacotes e Namespaces</h3>
-          <p><strong>Pacotes</strong> (ou namespaces) são mecanismos para organizar classes e evitar conflitos de nomes. Eles permitem agrupar classes relacionadas e fornecer níveis adicionais de controle de acesso.</p>
-          <div class="code-example">
-            <pre><code>// Exemplo de pacotes em Java
+          <p>Pacotes (ou namespaces) são mecanismos para organizar classes e evitar conflitos de nomes. Eles permitem agrupar classes relacionadas e fornecer níveis adicionais de controle de acesso.</p>
+          
+          <div class="code-example" id="exemplo-pacotes">
+            <pre><code>
+// Exemplo de pacotes em Java
 package com.minhaempresa.utils;
 
 public class StringFormatter {
@@ -172,44 +181,43 @@ import com.minhaempresa.utils.StringFormatter;
 public class App {
     public static void main(String[] args) {
         String nome = "joão";
-        System.out.println(StringFormatter.capitalizar(nome)); // "João"
+        System.out.println(StringFormatter.capitalizar(nome));  // "João"
     }
-}</code></pre>
+}
+            </code></pre>
           </div>
         </div>
         
         <div class="content-card">
           <h3>Sobrecarga de Métodos e Operadores</h3>
-          <p>A <strong>sobrecarga de métodos</strong> permite definir múltiplos métodos com o mesmo nome, mas diferentes parâmetros (tipo ou número). Isso aumenta a flexibilidade e legibilidade do código.</p>
-          <p>A <strong>sobrecarga de operadores</strong> (disponível em linguagens como C++ e Python) permite redefinir o comportamento de operadores (como +, -, *, /) para tipos definidos pelo usuário.</p>
-          <div class="code-example">
-            <pre><code>// Exemplo de sobrecarga de métodos em Java
+          <p>A sobrecarga de métodos permite definir múltiplos métodos com o mesmo nome, mas diferentes parâmetros (tipo ou número). Isso aumenta a flexibilidade e legibilidade do código.</p>
+          
+          <p>A sobrecarga de operadores (disponível em algumas linguagens) permite redefinir o comportamento de operadores como +, -, * para trabalhar com tipos definidos pelo usuário.</p>
+          
+          <div class="code-example" id="exemplo-sobrecarga">
+            <pre><code>
+// Exemplo de sobrecarga de métodos em Java
 public class Calculadora {
-    // Sobrecarga para soma de inteiros
+    // Sobrecarga do método somar
     public int somar(int a, int b) {
         return a + b;
     }
     
-    // Sobrecarga para soma de números de ponto flutuante
     public double somar(double a, double b) {
         return a + b;
     }
     
-    // Sobrecarga para soma de múltiplos inteiros
-    public int somar(int... numeros) {
-        int soma = 0;
-        for (int n : numeros) {
-            soma += n;
-        }
-        return soma;
+    public int somar(int a, int b, int c) {
+        return a + b + c;
     }
 }
 
-// Uso:
+// Uso
 Calculadora calc = new Calculadora();
-calc.somar(5, 3);          // Chama a primeira versão: 8
-calc.somar(5.5, 3.5);      // Chama a segunda versão: 9.0
-calc.somar(1, 2, 3, 4, 5); // Chama a terceira versão: 15</code></pre>
+int resultado1 = calc.somar(5, 10);           // Chama a primeira versão
+double resultado2 = calc.somar(2.5, 3.5);     // Chama a segunda versão
+int resultado3 = calc.somar(1, 2, 3);         // Chama a terceira versão
+            </code></pre>
           </div>
         </div>
       </section>
@@ -222,6 +230,6 @@ calc.somar(1, 2, 3, 4, 5); // Chama a terceira versão: 15</code></pre>
     </div>
   </footer>
   
-  <script src="js/scripts.js"></script>
+  <script src="{{ site.baseurl }}/js/scripts.js"></script>
 </body>
 </html>
