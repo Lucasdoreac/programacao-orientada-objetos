@@ -1,24 +1,26 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Exemplos Práticos de POO - Programação Orientada a Objetos</title>
-  <link rel="stylesheet" href="css/styles.css">
-  <meta name="description" content="Exemplos práticos de Programação Orientada a Objetos em diferentes linguagens como Java, Python e C#, com implementações reais.">
+  <link rel="stylesheet" href="{{ site.baseurl }}/css/styles.css">
+  <meta name="description" content="Exemplos práticos de Programação Orientada a Objetos em diferentes linguagens: Java, Python, C# e mais.">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="manifest" href="{{ site.baseurl }}/site.webmanifest">
+  <meta name="theme-color" content="#2c3e50">
 </head>
 <body>
   <header>
     <div class="container">
       <h1><i class="fas fa-cubes"></i> Programação Orientada a Objetos</h1>
       <nav>
-        <a href="index.html"><i class="fas fa-home"></i> Início</a>
-        <a href="conceitos.html"><i class="fas fa-book"></i> Conceitos</a>
-        <a href="pilares.html"><i class="fas fa-columns"></i> Pilares</a>
-        <a href="exemplos.html" class="active"><i class="fas fa-code"></i> Exemplos</a>
-        <a href="quiz.html"><i class="fas fa-question-circle"></i> Quiz</a>
-        <a href="recursos.html"><i class="fas fa-link"></i> Recursos</a>
+        <a href="{{ site.baseurl }}/"><i class="fas fa-home"></i> Início</a>
+        <a href="{{ site.baseurl }}/conceitos.html"><i class="fas fa-book"></i> Conceitos</a>
+        <a href="{{ site.baseurl }}/pilares.html"><i class="fas fa-columns"></i> Pilares</a>
+        <a href="{{ site.baseurl }}/exemplos.html" class="active"><i class="fas fa-code"></i> Exemplos</a>
+        <a href="{{ site.baseurl }}/quiz.html"><i class="fas fa-question-circle"></i> Quiz</a>
+        <a href="{{ site.baseurl }}/recursos.html"><i class="fas fa-link"></i> Recursos</a>
       </nav>
     </div>
   </header>
@@ -29,18 +31,14 @@
         <h2><i class="fas fa-code"></i> Exemplos Práticos</h2>
         <p class="section-intro">Veja exemplos práticos de POO em diferentes linguagens de programação. Cada exemplo demonstra como implementar e utilizar os conceitos de Programação Orientada a Objetos.</p>
         
-        <div class="tabs">
-          <div class="tab-buttons">
-            <button class="tab-btn active" data-tab="java">Java</button>
-            <button class="tab-btn" data-tab="python">Python</button>
-            <button class="tab-btn" data-tab="csharp">C#</button>
-          </div>
+        <!-- Exemplo 1: Sistema de Biblioteca em Java -->
+        <div class="content-card">
+          <h3>Sistema de Gestão de Biblioteca em Java</h3>
+          <p>Este exemplo mostra um sistema básico de biblioteca com classes para livros, usuários e empréstimos, demonstrando encapsulamento, herança e polimorfismo.</p>
           
-          <div class="tab-content active" id="java">
-            <h3>Sistema de Gestão de Biblioteca em Java</h3>
-            <p>Este exemplo mostra um sistema básico de biblioteca com classes para livros, usuários e empréstimos, demonstrando encapsulamento, herança e polimorfismo.</p>
-            <div class="code-example">
-              <pre><code>// Classe Livro
+          <div class="code-example" id="exemplo-biblioteca">
+            <pre><code>
+// Classe Livro
 public class Livro {
     private String titulo;
     private String autor;
@@ -112,22 +110,27 @@ public class Professor extends Usuario {
     public int getLimiteEmprestimos() {
         return 10; // Professores podem emprestar até 10 livros
     }
-}</code></pre>
-            </div>
-            <p>Neste exemplo, vemos os seguintes conceitos de POO:</p>
-            <ul>
-              <li><strong>Encapsulamento:</strong> Atributos privados com getters e setters</li>
-              <li><strong>Herança:</strong> Classes Estudante e Professor estendem a classe Usuario</li>
-              <li><strong>Polimorfismo:</strong> Método abstrato getLimiteEmprestimos() implementado diferentemente nas subclasses</li>
-              <li><strong>Abstração:</strong> Classe abstrata Usuario define a interface para diferentes tipos de usuários</li>
-            </ul>
+}
+            </code></pre>
           </div>
           
-          <div class="tab-content" id="python">
-            <h3>Sistema de E-commerce em Python</h3>
-            <p>Este exemplo demonstra um sistema de e-commerce básico em Python, mostrando como criar classes para produtos, carrinho de compras e clientes.</p>
-            <div class="code-example">
-              <pre><code>class Produto:
+          <p>Neste exemplo, vemos os seguintes conceitos de POO:</p>
+          <ul>
+            <li>Encapsulamento: Atributos privados com getters e setters</li>
+            <li>Herança: Classes Estudante e Professor estendem a classe Usuario</li>
+            <li>Polimorfismo: Método abstrato getLimiteEmprestimos() implementado diferentemente nas subclasses</li>
+            <li>Abstração: Classe abstrata Usuario define a interface para diferentes tipos de usuários</li>
+          </ul>
+        </div>
+        
+        <!-- Exemplo 2: Sistema de E-commerce em Python -->
+        <div class="content-card">
+          <h3>Sistema de E-commerce em Python</h3>
+          <p>Este exemplo demonstra um sistema de e-commerce básico em Python, mostrando como criar classes para produtos, carrinho de compras e clientes.</p>
+          
+          <div class="code-example" id="exemplo-ecommerce">
+            <pre><code>
+class Produto:
     def __init__(self, id, nome, preco, estoque=0):
         self.id = id
         self.nome = nome
@@ -187,117 +190,133 @@ class CarrinhoCompras:
         resultado = "Itens no carrinho:\n"
         for item in self.itens:
             resultado += f"- {item}\n"
+        
         resultado += f"\nTotal: R${self.calcular_total():.2f}"
-        return resultado</code></pre>
-            </div>
-            <p>Este exemplo em Python demonstra:</p>
-            <ul>
-              <li><strong>Encapsulamento:</strong> Métodos para controlar o acesso aos atributos (como reduzir_estoque)</li>
-              <li><strong>Composição:</strong> CarrinhoCompras contém objetos ItemCarrinho</li>
-              <li><strong>Sobrescrita de métodos:</strong> Método __str__ é sobrescrito para personalizar a representação em string</li>
-            </ul>
+        return resultado
+            </code></pre>
           </div>
           
-          <div class="tab-content" id="csharp">
-            <h3>Sistema de Banco em C#</h3>
-            <p>Este exemplo mostra um sistema bancário simples em C#, demonstrando encapsulamento, herança e polimorfismo com diferentes tipos de contas bancárias.</p>
-            <div class="code-example">
-              <pre><code>using System;
+          <p>Este exemplo em Python demonstra:</p>
+          <ul>
+            <li>Encapsulamento: Métodos para controlar o acesso aos atributos (como reduzir_estoque)</li>
+            <li>Composição: CarrinhoCompras contém objetos ItemCarrinho</li>
+            <li>Sobrescrita de métodos: Método __str__ é sobrescrito para personalizar a representação em string</li>
+          </ul>
+        </div>
+        
+        <!-- Exemplo 3: Sistema Bancário em C# -->
+        <div class="content-card">
+          <h3>Sistema de Banco em C#</h3>
+          <p>Este exemplo mostra um sistema bancário simples em C#, demonstrando encapsulamento, herança e polimorfismo com diferentes tipos de contas bancárias.</p>
+          
+          <div class="code-example" id="exemplo-banco">
+            <pre><code>
+using System;
 using System.Collections.Generic;
 
 // Classe base para contas bancárias
-public abstract class ContaBancaria
-{
+public abstract class ContaBancaria {
     // Atributos encapsulados
     public string Numero { get; private set; }
     public string Titular { get; set; }
     protected decimal Saldo { get; set; }
     
     // Construtor
-    public ContaBancaria(string numero, string titular, decimal saldoInicial = 0)
-    {
+    public ContaBancaria(string numero, string titular, decimal saldoInicial = 0) {
         Numero = numero;
         Titular = titular;
         Saldo = saldoInicial;
     }
     
     // Método para visualizar saldo (público)
-    public decimal ConsultarSaldo()
-    {
+    public decimal ConsultarSaldo() {
         return Saldo;
     }
     
-    // Método para depósito
-    public virtual void Depositar(decimal valor)
-    {
-        if (valor <= 0)
-            throw new ArgumentException("O valor do depósito deve ser positivo");
-            
+    // Método para depósito (público)
+    public void Depositar(decimal valor) {
+        if (valor <= 0) {
+            throw new ArgumentException("Valor de depósito deve ser positivo");
+        }
         Saldo += valor;
-        Console.WriteLine($"Depósito de {valor:C} realizado com sucesso.");
     }
     
-    // Método abstrato para saque (cada tipo de conta implementa sua própria regra)
+    // Método abstrato para saque (deve ser implementado pelas subclasses)
     public abstract bool Sacar(decimal valor);
     
-    // Método para transferência
-    public virtual bool Transferir(ContaBancaria contaDestino, decimal valor)
-    {
-        if (Sacar(valor))
-        {
-            contaDestino.Depositar(valor);
+    // Método para transferência entre contas (público)
+    public bool Transferir(ContaBancaria destino, decimal valor) {
+        if (Sacar(valor)) {
+            destino.Depositar(valor);
             return true;
         }
         return false;
     }
 }
 
-// Classe para conta corrente
-public class ContaCorrente : ContaBancaria
-{
-    public decimal LimiteChequeEspecial { get; private set; }
+// Conta Corrente
+public class ContaCorrente : ContaBancaria {
+    public decimal LimiteCredito { get; private set; }
     
-    public ContaCorrente(string numero, string titular, decimal saldoInicial = 0, decimal limiteChequeEspecial = 0)
-        : base(numero, titular, saldoInicial)
-    {
-        LimiteChequeEspecial = limiteChequeEspecial;
+    public ContaCorrente(string numero, string titular, decimal saldoInicial = 0, decimal limiteCredito = 0)
+        : base(numero, titular, saldoInicial) {
+        LimiteCredito = limiteCredito;
     }
     
-    public override bool Sacar(decimal valor)
-    {
-        if (valor <= 0)
-        {
-            Console.WriteLine("O valor do saque deve ser positivo");
-            return false;
+    // Implementação específica do saque para conta corrente
+    public override bool Sacar(decimal valor) {
+        if (valor <= 0) {
+            throw new ArgumentException("Valor de saque deve ser positivo");
         }
         
-        // Verifica se o saque é possível com o limite do cheque especial
-        if (valor <= Saldo + LimiteChequeEspecial)
-        {
+        // Permite saldo negativo até o limite de crédito
+        if (Saldo + LimiteCredito >= valor) {
             Saldo -= valor;
-            Console.WriteLine($"Saque de {valor:C} realizado com sucesso.");
-            
-            if (Saldo < 0)
-                Console.WriteLine($"Atenção: Você está utilizando {Math.Abs(Saldo):C} do seu cheque especial.");
-                
             return true;
         }
-        else
-        {
-            Console.WriteLine("Saldo insuficiente para o saque");
-            return false;
-        }
+        return false;
     }
-}</code></pre>
-            </div>
-            <p>Este exemplo em C# demonstra:</p>
-            <ul>
-              <li><strong>Encapsulamento:</strong> Propriedades com modificadores de acesso (get; private set;)</li>
-              <li><strong>Herança:</strong> ContaCorrente herda de ContaBancaria</li>
-              <li><strong>Polimorfismo:</strong> Método virtual Depositar e método abstrato Sacar</li>
-              <li><strong>Abstração:</strong> Classe abstrata ContaBancaria define estrutura básica</li>
-            </ul>
+}
+
+// Conta Poupança
+public class ContaPoupanca : ContaBancaria {
+    public decimal TaxaJuros { get; private set; }
+    
+    public ContaPoupanca(string numero, string titular, decimal saldoInicial = 0, decimal taxaJuros = 0.003m)
+        : base(numero, titular, saldoInicial) {
+        TaxaJuros = taxaJuros;
+    }
+    
+    // Implementação específica do saque para conta poupança
+    public override bool Sacar(decimal valor) {
+        if (valor <= 0) {
+            throw new ArgumentException("Valor de saque deve ser positivo");
+        }
+        
+        // Não permite saldo negativo
+        if (Saldo >= valor) {
+            Saldo -= valor;
+            return true;
+        }
+        return false;
+    }
+    
+    // Método específico para aplicar juros
+    public void AplicarJuros() {
+        decimal juros = Saldo * TaxaJuros;
+        Depositar(juros);
+    }
+}
+            </code></pre>
           </div>
+          
+          <p>Este exemplo em C# mostra:</p>
+          <ul>
+            <li>Herança: ContaCorrente e ContaPoupanca herdam de ContaBancaria</li>
+            <li>Polimorfismo: O método Sacar é implementado de forma diferente em cada subclasse</li>
+            <li>Encapsulamento: Propriedades com níveis de acesso controlados (public, private, protected)</li>
+            <li>Abstração: A classe ContaBancaria é abstrata e define uma interface comum</li>
+          </ul>
         </div>
       </section>
     </div>
@@ -309,6 +328,6 @@ public class ContaCorrente : ContaBancaria
     </div>
   </footer>
   
-  <script src="js/scripts.js"></script>
+  <script src="{{ site.baseurl }}/js/scripts.js"></script>
 </body>
 </html>
