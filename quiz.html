@@ -1,24 +1,26 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Quiz de POO - Programação Orientada a Objetos</title>
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="{{ site.baseurl }}/css/styles.css">
   <meta name="description" content="Teste seus conhecimentos em Programação Orientada a Objetos com nosso quiz interativo.">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="manifest" href="{{ site.baseurl }}/site.webmanifest">
+  <meta name="theme-color" content="#2c3e50">
 </head>
 <body>
   <header>
     <div class="container">
       <h1><i class="fas fa-cubes"></i> Programação Orientada a Objetos</h1>
       <nav>
-        <a href="index.html"><i class="fas fa-home"></i> Início</a>
-        <a href="conceitos.html"><i class="fas fa-book"></i> Conceitos</a>
-        <a href="pilares.html"><i class="fas fa-columns"></i> Pilares</a>
-        <a href="exemplos.html"><i class="fas fa-code"></i> Exemplos</a>
-        <a href="quiz.html" class="active"><i class="fas fa-question-circle"></i> Quiz</a>
-        <a href="recursos.html"><i class="fas fa-link"></i> Recursos</a>
+        <a href="{{ site.baseurl }}/"><i class="fas fa-home"></i> Início</a>
+        <a href="{{ site.baseurl }}/conceitos.html"><i class="fas fa-book"></i> Conceitos</a>
+        <a href="{{ site.baseurl }}/pilares.html"><i class="fas fa-columns"></i> Pilares</a>
+        <a href="{{ site.baseurl }}/exemplos.html"><i class="fas fa-code"></i> Exemplos</a>
+        <a href="{{ site.baseurl }}/quiz.html" class="active"><i class="fas fa-question-circle"></i> Quiz</a>
+        <a href="{{ site.baseurl }}/recursos.html"><i class="fas fa-link"></i> Recursos</a>
       </nav>
     </div>
   </header>
@@ -32,14 +34,39 @@
         <div id="quiz-container">
           <div class="quiz-questions">
             <!-- Pergunta 1 -->
-            <div class="quiz-question active" data-question="1">
+            <div class="quiz-question" data-question="1">
               <h3>1. Qual é o principal objetivo da Programação Orientada a Objetos (POO)?</h3>
               <ul>
-                <li><label><input type="radio" name="q1" value="a"> Reduzir a complexidade do código.</label></li>
-                <li><label><input type="radio" name="q1" value="b"> Facilitar a reutilização de código.</label></li>
-                <li><label><input type="radio" name="q1" value="c"> Melhorar a organização e a modularidade do software.</label></li>
-                <li><label><input type="radio" name="q1" value="d"> Todas as alternativas anteriores.</label></li>
-                <li><label><input type="radio" name="q1" value="e"> Nenhuma das alternativas anteriores.</label></li>
+                <li>
+                  <label>
+                    <input type="radio" name="q1" value="a">
+                    Criar programas mais rápidos e eficientes
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input type="radio" name="q1" value="b">
+                    Reduzir o uso de memória em programas
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input type="radio" name="q1" value="c">
+                    Organizar o código em módulos reutilizáveis baseados em objetos
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input type="radio" name="q1" value="d">
+                    Eliminar a necessidade de estruturas de controle como loops e condicionais
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input type="radio" name="q1" value="e">
+                    Substituir completamente a programação procedural
+                  </label>
+                </li>
               </ul>
             </div>
             
@@ -47,11 +74,36 @@
             <div class="quiz-question" data-question="2">
               <h3>2. O que é uma classe em POO?</h3>
               <ul>
-                <li><label><input type="radio" name="q2" value="a"> Um conjunto de funções.</label></li>
-                <li><label><input type="radio" name="q2" value="b"> Um modelo para criar objetos.</label></li>
-                <li><label><input type="radio" name="q2" value="c"> Um tipo de variável.</label></li>
-                <li><label><input type="radio" name="q2" value="d"> Um método de programação.</label></li>
-                <li><label><input type="radio" name="q2" value="e"> Um paradigma de programação.</label></li>
+                <li>
+                  <label>
+                    <input type="radio" name="q2" value="a">
+                    Uma função que retorna um valor
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input type="radio" name="q2" value="b">
+                    Um modelo para criar objetos
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input type="radio" name="q2" value="c">
+                    Um tipo de dado primitivo
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input type="radio" name="q2" value="d">
+                    Uma estrutura de controle
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input type="radio" name="q2" value="e">
+                    Um arquivo de código-fonte
+                  </label>
+                </li>
               </ul>
             </div>
             
@@ -59,31 +111,66 @@
             <div class="quiz-question" data-question="3">
               <h3>3. O que é um objeto em POO?</h3>
               <ul>
-                <li><label><input type="radio" name="q3" value="a"> Uma instância de uma classe.</label></li>
-                <li><label><input type="radio" name="q3" value="b"> Um tipo de dado primitivo.</label></li>
-                <li><label><input type="radio" name="q3" value="c"> Um método de programação.</label></li>
-                <li><label><input type="radio" name="q3" value="d"> Um paradigma de programação.</label></li>
-                <li><label><input type="radio" name="q3" value="e"> Nenhuma das alternativas anteriores.</label></li>
+                <li>
+                  <label>
+                    <input type="radio" name="q3" value="a">
+                    Uma instância de uma classe
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input type="radio" name="q3" value="b">
+                    Um método dentro de uma classe
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input type="radio" name="q3" value="c">
+                    Uma variável global
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input type="radio" name="q3" value="d">
+                    Um pacote de funções relacionadas
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input type="radio" name="q3" value="e">
+                    Uma interface gráfica
+                  </label>
+                </li>
               </ul>
             </div>
           </div>
           
+          <!-- Navegação do quiz -->
           <div class="quiz-navigation">
-            <button id="prev-question" class="btn nav-btn" disabled><i class="fas fa-arrow-left"></i> Anterior</button>
-            <button id="next-question" class="btn nav-btn">Próxima <i class="fas fa-arrow-right"></i></button>
-            <button id="submit-quiz" class="btn primary-btn hidden">Verificar Respostas</button>
+            <button id="prev-question" class="btn secondary-btn" disabled>
+              <i class="fas fa-arrow-left"></i> Anterior
+            </button>
+            <button id="next-question" class="btn primary-btn">
+              Próxima <i class="fas fa-arrow-right"></i>
+            </button>
+            <button id="submit-quiz" class="btn primary-btn hidden">
+              Finalizar <i class="fas fa-check"></i>
+            </button>
           </div>
           
+          <!-- Resultado do quiz (inicialmente oculto) -->
           <div id="quiz-result" class="hidden">
-            <h3><i class="fas fa-award"></i> Resultado do Quiz</h3>
+            <h3>Resultado do Quiz</h3>
             <div class="result-container">
               <div class="score-circle">
-                <div class="score-number">0</div>
-                <div class="score-text">de 3</div>
+                <span class="score-number">0</span>
+                <span class="score-text">de 3</span>
               </div>
-              <div class="result-message"></div>
+              <p class="result-message">Continue estudando!</p>
             </div>
-            <button id="retry-quiz" class="btn primary-btn">Tentar Novamente</button>
+            <button id="retry-quiz" class="btn primary-btn">
+              <i class="fas fa-redo"></i> Tentar Novamente
+            </button>
           </div>
         </div>
       </section>
@@ -96,6 +183,6 @@
     </div>
   </footer>
   
-  <script src="js/scripts.js"></script>
+  <script src="{{ site.baseurl }}/js/scripts.js"></script>
 </body>
 </html>
