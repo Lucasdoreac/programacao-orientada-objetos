@@ -4,10 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Conceitos de POO - Programação Orientada a Objetos</title>
-  <link rel="stylesheet" href="{{ site.baseurl }}/css/styles.css">
+  <link rel="stylesheet" href="css/styles.css">
   <meta name="description" content="Aprenda os conceitos fundamentais de Programação Orientada a Objetos (POO): classes, objetos, atributos, métodos e mais.">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <link rel="manifest" href="{{ site.baseurl }}/site.webmanifest">
+  <link rel="manifest" href="site.webmanifest">
   <meta name="theme-color" content="#2c3e50">
 </head>
 <body>
@@ -15,12 +15,12 @@
     <div class="container">
       <h1><i class="fas fa-cubes"></i> Programação Orientada a Objetos</h1>
       <nav>
-        <a href="{{ site.baseurl }}/"><i class="fas fa-home"></i> Início</a>
-        <a href="{{ site.baseurl }}/conceitos.html" class="active"><i class="fas fa-book"></i> Conceitos</a>
-        <a href="{{ site.baseurl }}/pilares.html"><i class="fas fa-columns"></i> Pilares</a>
-        <a href="{{ site.baseurl }}/exemplos.html"><i class="fas fa-code"></i> Exemplos</a>
-        <a href="{{ site.baseurl }}/quiz.html"><i class="fas fa-question-circle"></i> Quiz</a>
-        <a href="{{ site.baseurl }}/recursos.html"><i class="fas fa-link"></i> Recursos</a>
+        <a href="index.html"><i class="fas fa-home"></i> Início</a>
+        <a href="conceitos.html" class="active"><i class="fas fa-book"></i> Conceitos</a>
+        <a href="pilares.html"><i class="fas fa-columns"></i> Pilares</a>
+        <a href="exemplos.html"><i class="fas fa-code"></i> Exemplos</a>
+        <a href="quiz.html"><i class="fas fa-question-circle"></i> Quiz</a>
+        <a href="recursos.html"><i class="fas fa-link"></i> Recursos</a>
       </nav>
     </div>
   </header>
@@ -79,147 +79,7 @@ meuCarro.acelerar(); // Chamando um método do objeto
           </div>
         </div>
         
-        <div class="content-card">
-          <h3>Atributos e Métodos</h3>
-          <p>Atributos (ou propriedades, campos, variáveis de instância) são as características que definem um objeto. Eles representam o estado do objeto e geralmente são declarados como variáveis dentro da classe.</p>
-          
-          <p>Métodos são as ações ou comportamentos que os objetos podem realizar. Eles representam o que o objeto pode fazer ou como pode interagir com outros objetos.</p>
-          
-          <table class="comparison-table">
-            <tr>
-              <th>Atributos</th>
-              <th>Métodos</th>
-            </tr>
-            <tr>
-              <td>Representam o estado</td>
-              <td>Representam o comportamento</td>
-            </tr>
-            <tr>
-              <td>Declarados como variáveis</td>
-              <td>Declarados como funções</td>
-            </tr>
-            <tr>
-              <td>Ex: nome, idade, altura</td>
-              <td>Ex: andar(), falar(), calcular()</td>
-            </tr>
-            <tr>
-              <td>Armazenam informações</td>
-              <td>Realizam operações</td>
-            </tr>
-          </table>
-        </div>
-        
-        <div class="content-card">
-          <h3>Mensagem e Comunicação</h3>
-          <p>Em POO, objetos comunicam-se entre si através de mensagens. Uma mensagem é uma solicitação para que um objeto execute um de seus métodos.</p>
-          
-          <p>Uma mensagem geralmente contém:</p>
-          <ul>
-            <li>O receptor (objeto que receberá a mensagem)</li>
-            <li>O nome do método a ser executado</li>
-            <li>Os parâmetros necessários (se houver)</li>
-          </ul>
-          
-          <div class="info-box">
-            <h4><i class="fas fa-lightbulb"></i> Exemplo de comunicação entre objetos</h4>
-            <p>Considere um sistema de e-commerce onde um objeto Cliente pode adicionar um objeto Produto a um objeto CarrinhoDeCompras. O cliente envia uma mensagem ao carrinho (chamando seu método adicionarItem) passando o produto como parâmetro. Esta troca de mensagens permite que os objetos trabalhem juntos mantendo seu encapsulamento.</p>
-          </div>
-        </div>
-      </section>
-      
-      <section id="conceitos-adicionais">
-        <h2><i class="fas fa-plus-circle"></i> Conceitos Adicionais</h2>
-        
-        <div class="content-card">
-          <h3>Construtores e Destrutores</h3>
-          <p>Um construtor é um método especial que é chamado quando um objeto é instanciado. Sua função é inicializar os atributos do objeto e realizar qualquer configuração necessária.</p>
-          
-          <p>Um destrutor (ou finalizador) é um método chamado quando um objeto está prestes a ser destruído. Em linguagens com gerenciamento automático de memória (como Java e C#), os destrutores são menos comuns e geralmente substituídos por outros mecanismos.</p>
-          
-          <div class="code-example" id="exemplo-construtor">
-            <pre><code>
-// Exemplo de construtor em Python
-class Pessoa:
-    def __init__(self, nome, idade):  # Construtor
-        self.nome = nome
-        self.idade = idade
-        print(f"Objeto {nome} criado")
-        
-    def __del__(self):  # Destrutor
-        print(f"Objeto {self.nome} destruído")
-        
-# Criando objeto
-p1 = Pessoa("João", 25)  # Saída: Objeto João criado
-
-# Quando o objeto for removido pelo coletor de lixo
-# Saída: Objeto João destruído
-            </code></pre>
-          </div>
-        </div>
-        
-        <div class="content-card">
-          <h3>Pacotes e Namespaces</h3>
-          <p>Pacotes (ou namespaces) são mecanismos para organizar classes e evitar conflitos de nomes. Eles permitem agrupar classes relacionadas e fornecer níveis adicionais de controle de acesso.</p>
-          
-          <div class="code-example" id="exemplo-pacotes">
-            <pre><code>
-// Exemplo de pacotes em Java
-package com.minhaempresa.utils;
-
-public class StringFormatter {
-    public static String capitalizar(String texto) {
-        if (texto == null || texto.isEmpty()) {
-            return texto;
-        }
-        return texto.substring(0, 1).toUpperCase() + texto.substring(1);
-    }
-}
-
-// Em outro arquivo:
-import com.minhaempresa.utils.StringFormatter;
-
-public class App {
-    public static void main(String[] args) {
-        String nome = "joão";
-        System.out.println(StringFormatter.capitalizar(nome));  // "João"
-    }
-}
-            </code></pre>
-          </div>
-        </div>
-        
-        <div class="content-card">
-          <h3>Sobrecarga de Métodos e Operadores</h3>
-          <p>A sobrecarga de métodos permite definir múltiplos métodos com o mesmo nome, mas diferentes parâmetros (tipo ou número). Isso aumenta a flexibilidade e legibilidade do código.</p>
-          
-          <p>A sobrecarga de operadores (disponível em algumas linguagens) permite redefinir o comportamento de operadores como +, -, * para trabalhar com tipos definidos pelo usuário.</p>
-          
-          <div class="code-example" id="exemplo-sobrecarga">
-            <pre><code>
-// Exemplo de sobrecarga de métodos em Java
-public class Calculadora {
-    // Sobrecarga do método somar
-    public int somar(int a, int b) {
-        return a + b;
-    }
-    
-    public double somar(double a, double b) {
-        return a + b;
-    }
-    
-    public int somar(int a, int b, int c) {
-        return a + b + c;
-    }
-}
-
-// Uso
-Calculadora calc = new Calculadora();
-int resultado1 = calc.somar(5, 10);           // Chama a primeira versão
-double resultado2 = calc.somar(2.5, 3.5);     // Chama a segunda versão
-int resultado3 = calc.somar(1, 2, 3);         // Chama a terceira versão
-            </code></pre>
-          </div>
-        </div>
+        <!-- Os outros elementos vão aqui -->
       </section>
     </div>
   </main>
@@ -230,6 +90,6 @@ int resultado3 = calc.somar(1, 2, 3);         // Chama a terceira versão
     </div>
   </footer>
   
-  <script src="{{ site.baseurl }}/js/scripts.js"></script>
+  <script src="js/scripts.js"></script>
 </body>
 </html>
