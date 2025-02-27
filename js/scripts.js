@@ -1,14 +1,20 @@
 // Scripts para o site educativo sobre POO
 
 document.addEventListener('DOMContentLoaded', function() {
-    // Rolagem suave para navegação
-    document.querySelectorAll('nav a').forEach(function(anchor) {
+    // Rolagem suave apenas para links internos (que começam com #)
+    document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
         anchor.addEventListener('click', function(e) {
-            e.preventDefault();
-            var target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                target.scrollIntoView({ behavior: 'smooth' });
+            const href = this.getAttribute('href');
+            
+            // Só aplicamos o preventDefault() para links internos (com #)
+            if (href.startsWith('#')) {
+                e.preventDefault();
+                const target = document.querySelector(href);
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
             }
+            // Links externos ou de navegação funcionam normalmente
         });
     });
 
