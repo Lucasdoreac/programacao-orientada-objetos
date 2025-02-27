@@ -1,56 +1,26 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Programação Orientada a Objetos - Guia Completo</title>
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="{{ site.baseurl }}/css/styles.css">
   <meta name="description" content="Site educativo completo sobre Programação Orientada a Objetos (POO) - Aprenda conceitos fundamentais, pilares, implementações práticas e exemplos em diversas linguagens.">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <link rel="manifest" href="site.webmanifest">
+  <link rel="manifest" href="{{ site.baseurl }}/site.webmanifest">
   <meta name="theme-color" content="#2c3e50">
-  <style>
-    /* Estilos básicos para garantir funcionamento mesmo se o CSS externo falhar */
-    body {
-      font-family: 'Segoe UI', Arial, sans-serif;
-      line-height: 1.6;
-      margin: 0;
-      padding: 0;
-      color: #333;
-      background-color: #fdfdfd;
-    }
-    .container {
-      width: 90%;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 20px;
-    }
-    header {
-      background: #2c3e50;
-      color: #fff;
-      padding: 20px 0;
-    }
-    nav a {
-      color: #fff;
-      margin-right: 15px;
-      text-decoration: none;
-    }
-    h1, h2, h3 {
-      color: #2c3e50;
-    }
-  </style>
 </head>
 <body>
   <header>
     <div class="container">
       <h1><i class="fas fa-cubes"></i> Programação Orientada a Objetos</h1>
       <nav>
-        <a href="index.html" class="active"><i class="fas fa-home"></i> Início</a>
-        <a href="conceitos.html"><i class="fas fa-book"></i> Conceitos</a>
-        <a href="pilares.html"><i class="fas fa-columns"></i> Pilares</a>
-        <a href="exemplos.html"><i class="fas fa-code"></i> Exemplos</a>
-        <a href="quiz.html"><i class="fas fa-question-circle"></i> Quiz</a>
-        <a href="recursos.html"><i class="fas fa-link"></i> Recursos</a>
+        <a href="{{ site.baseurl }}/" class="active"><i class="fas fa-home"></i> Início</a>
+        <a href="{{ site.baseurl }}/conceitos.html"><i class="fas fa-book"></i> Conceitos</a>
+        <a href="{{ site.baseurl }}/pilares.html"><i class="fas fa-columns"></i> Pilares</a>
+        <a href="{{ site.baseurl }}/exemplos.html"><i class="fas fa-code"></i> Exemplos</a>
+        <a href="{{ site.baseurl }}/quiz.html"><i class="fas fa-question-circle"></i> Quiz</a>
+        <a href="{{ site.baseurl }}/recursos.html"><i class="fas fa-link"></i> Recursos</a>
       </nav>
     </div>
   </header>
@@ -63,8 +33,8 @@
           <h2>Aprenda os conceitos fundamentais de POO</h2>
           <p>Guia completo para compreender a Programação Orientada a Objetos e sua aplicação no desenvolvimento de software moderno.</p>
           <div class="hero-buttons">
-            <a href="pilares.html" class="btn primary-btn"><i class="fas fa-columns"></i> Explorar os 4 Pilares</a>
-            <a href="exemplos.html" class="btn secondary-btn"><i class="fas fa-code"></i> Ver Exemplos Práticos</a>
+            <a href="{{ site.baseurl }}/pilares.html" class="btn primary-btn"><i class="fas fa-columns"></i> Explorar os 4 Pilares</a>
+            <a href="{{ site.baseurl }}/exemplos.html" class="btn secondary-btn"><i class="fas fa-code"></i> Ver Exemplos Práticos</a>
           </div>
         </div>
       </section>
@@ -102,11 +72,11 @@
           
           <p>Aqui você encontrará:</p>
           <ul>
-            <li><strong><a href="conceitos.html">Conceitos Fundamentais</a></strong> - Aprenda o que são classes, objetos, atributos, métodos e como eles se relacionam.</li>
-            <li><strong><a href="pilares.html">Os Quatro Pilares</a></strong> - Compreenda encapsulamento, herança, polimorfismo e abstração com exemplos claros.</li>
-            <li><strong><a href="exemplos.html">Exemplos Práticos</a></strong> - Veja implementações em diferentes linguagens (Java, Python, C#).</li>
-            <li><strong><a href="quiz.html">Quiz Interativo</a></strong> - Teste seus conhecimentos com perguntas sobre POO.</li>
-            <li><strong><a href="recursos.html">Recursos Adicionais</a></strong> - Encontre links, tutoriais e documentação para aprofundar seus estudos.</li>
+            <li><strong><a href="{{ site.baseurl }}/conceitos.html">Conceitos Fundamentais</a></strong> - Aprenda o que são classes, objetos, atributos, métodos e como eles se relacionam.</li>
+            <li><strong><a href="{{ site.baseurl }}/pilares.html">Os Quatro Pilares</a></strong> - Compreenda encapsulamento, herança, polimorfismo e abstração com exemplos claros.</li>
+            <li><strong><a href="{{ site.baseurl }}/exemplos.html">Exemplos Práticos</a></strong> - Veja implementações em diferentes linguagens (Java, Python, C#).</li>
+            <li><strong><a href="{{ site.baseurl }}/quiz.html">Quiz Interativo</a></strong> - Teste seus conhecimentos com perguntas sobre POO.</li>
+            <li><strong><a href="{{ site.baseurl }}/recursos.html">Recursos Adicionais</a></strong> - Encontre links, tutoriais e documentação para aprofundar seus estudos.</li>
           </ul>
           
           <div class="info-box">
@@ -124,6 +94,6 @@
     </div>
   </footer>
   
-  <script src="js/scripts.js"></script>
+  <script src="{{ site.baseurl }}/js/scripts.js"></script>
 </body>
 </html>
