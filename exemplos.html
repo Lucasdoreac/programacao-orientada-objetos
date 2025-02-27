@@ -9,18 +9,40 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link rel="manifest" href="site.webmanifest">
   <meta name="theme-color" content="#2c3e50">
+  <style>
+    /* Estilos adicionais para garantir que a navegação seja clicável */
+    nav a {
+      display: inline-block;
+      padding: 10px 15px;
+      margin: 0 5px;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+    
+    nav a:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+      transform: translateY(-2px);
+    }
+    
+    nav a.active {
+      background-color: rgba(46, 204, 113, 0.3);
+      font-weight: bold;
+    }
+  </style>
 </head>
 <body>
   <header>
     <div class="container">
       <h1><i class="fas fa-cubes"></i> Programação Orientada a Objetos</h1>
       <nav>
-        <a href="index.html"><i class="fas fa-home"></i> Início</a>
-        <a href="conceitos.html"><i class="fas fa-book"></i> Conceitos</a>
-        <a href="pilares.html"><i class="fas fa-columns"></i> Pilares</a>
-        <a href="exemplos.html" class="active"><i class="fas fa-code"></i> Exemplos</a>
-        <a href="quiz.html"><i class="fas fa-question-circle"></i> Quiz</a>
-        <a href="recursos.html"><i class="fas fa-link"></i> Recursos</a>
+        <a href="https://lucasdoreac.github.io/programacao-orientada-objetos/index.html"><i class="fas fa-home"></i> Início</a>
+        <a href="https://lucasdoreac.github.io/programacao-orientada-objetos/conceitos.html"><i class="fas fa-book"></i> Conceitos</a>
+        <a href="https://lucasdoreac.github.io/programacao-orientada-objetos/pilares.html"><i class="fas fa-columns"></i> Pilares</a>
+        <a href="https://lucasdoreac.github.io/programacao-orientada-objetos/exemplos.html" class="active"><i class="fas fa-code"></i> Exemplos</a>
+        <a href="https://lucasdoreac.github.io/programacao-orientada-objetos/quiz.html"><i class="fas fa-question-circle"></i> Quiz</a>
+        <a href="https://lucasdoreac.github.io/programacao-orientada-objetos/recursos.html"><i class="fas fa-link"></i> Recursos</a>
       </nav>
     </div>
   </header>
